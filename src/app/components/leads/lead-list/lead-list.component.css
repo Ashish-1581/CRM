@@ -1,0 +1,136 @@
+/* Page container */
+.manager-leads {
+  font-family: Arial, sans-serif;
+  color: #333;
+  padding: 16px;
+}
+
+/* Header */
+.manager-leads .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.manager-leads h2 {
+  color: #1976d2;
+}
+
+.add-lead-btn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.add-lead-btn:hover {
+  background: #0056b3;
+}
+
+/* Filters */
+.manager-leads .filters {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.manager-leads .filters input,
+.manager-leads .filters select {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.manager-leads .filters input:focus,
+.manager-leads .filters select:focus {
+  border-color: #1976d2;
+}
+
+/* Leads list */
+.manager-leads .leads {
+  margin-top: 16px;
+}
+
+.manager-leads .lead-card {
+  background: white;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.manager-leads .lead-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Lead header */
+.manager-leads .lead-header b {
+  font-size: 15px;
+  color: #222;
+}
+
+/* Meta info */
+.manager-leads .lead-meta {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #555;
+}
+
+
+
+
+
+/* Contact */
+.manager-leads .lead-contact {
+  margin-top: 4px;
+  color: #777;
+  font-size: 13px;
+}
+
+/* Footer actions */
+.manager-leads .lead-footer {
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.manager-leads .lead-footer a {
+  padding: 4px 10px;
+  font-size: 13px;
+  border-radius: 6px;
+  background: #1976d2;
+  color: white;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.manager-leads .lead-footer a:hover {
+  background: #145aa1;
+}
+
+.manager-leads .delete-btn {
+    outline: none;
+    border: none;
+  padding: 4px 10px;
+  font-size: 13px;
+  border-radius: 6px;
+  background: rgb(246, 53, 53);
+  color: white;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.manager-leads .lead-footer .delete-btn:hover {
+  background: #c70000;
+}

@@ -1,0 +1,74 @@
+<div class="dashboard">
+  <h2>Dashboard</h2>
+
+  <!-- Search & filters -->
+  <form [formGroup]="form">
+    <input formControlName="q" placeholder="Search name/email" />
+    <select formControlName="region">
+      <option value="">All regions</option>
+      <option>APAC</option>
+      <option>EMEA</option>
+      <option>AMER</option>
+    </select>
+    <select formControlName="product">
+      <option value="">All products</option>
+      <option>CRM</option>
+      <option>ERP</option>
+    </select>
+  </form>
+
+  <!-- Stats -->
+  <div class="stats">
+    <div class="stat-card">
+      <h3>Total (live)</h3>
+      <div *ngIf="leads$ | async as list">{{ list.length }}</div>
+    </div>
+    <div class="stat-card">
+      <h3>Conversion %</h3>
+      <div>{{ conversion$ | async | number : "1.0-2" }}%</div>
+    </div>
+    <div class="stat-card" style="flex: 2">
+      <h3>Trend</h3>
+      <canvas
+        baseChart
+        *ngIf="chart$ | async as c"
+        [data]="{ datasets: [{ data: c.data }], labels: c.labels }"
+        [type]="'line'"
+        
+      ></canvas>
+    </div>
+  </div>
+
+  <hr />
+
+<!-- Leads -->
+<h3>Filtered Leads</h3>
+<div *ngIf="leads$ | async as list" class="leads">
+  <div *ngFor="let l of list" class="lead-card">
+    
+    <!-- Header -->
+    <div >
+      <b >{{ l.name }}</b>
+
+     
+    </div>
+
+    <!-- Meta info -->
+    <div >
+        <span>Status: {{ l.status || "—" }}</span> •
+      <span>Priority: {{ l.priority || "—" }}</span> • 
+      <span>Region: {{ l.region || "—" }}</span>
+    </div>
+
+    <!-- Contact / Product -->
+    <div >
+      <small>{{ l.email }} • {{ l.product }}</small>
+    </div>
+
+    <!-- Footer -->
+    <div >
+      <a [routerLink]="['/lead-view', l.id]">View Details →</a>
+    </div>
+
+  </div>
+</div>

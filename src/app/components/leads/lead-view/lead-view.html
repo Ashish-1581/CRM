@@ -1,0 +1,31 @@
+<div *ngIf="lead$ | async as lead" class="lead-detail-card">
+  <h2>Lead Details</h2>
+  <div class="detail-row">
+    <span class="label">Name:</span>
+    <span class="value">{{ lead.name }}</span>
+  </div>
+  <div class="detail-row">
+    <span class="label">Email:</span>
+    <span class="value">{{ lead.email }}</span>
+  </div>
+  <div class="detail-row">
+    <span class="label">Region:</span>
+    <span class="value">{{ lead.region || "—" }}</span>
+  </div>
+  <div class="detail-row">
+    <span class="label">Product:</span>
+    <span class="value">{{ lead.product || "—" }}</span>
+  </div>
+  <div class="detail-row">
+    <span class="label">Status:</span>
+    <span class="badge" [ngClass]="lead.status?.toLowerCase()">{{ lead.status }}</span>
+  </div>
+  <div class="detail-row">
+    <span class="label">Priority:</span>
+    <span class="badge priority">{{ lead.priority }}</span>
+  </div>
+  <div class="notes">
+    <strong>Notes</strong>
+    <p>{{ lead.notes || "No notes available" }}</p>
+  </div>
+</div>

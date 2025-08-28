@@ -1,0 +1,74 @@
+.lead-detail-card {
+  background: #fff;
+  padding: 20px 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  max-width: 550px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+.lead-detail-card h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 8px;
+  color: #1976d2;
+}
+
+/* Each row */
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-size: 15px;
+}
+
+.detail-row .label {
+  font-weight: 600;
+  color: #555;
+  width: 120px;
+}
+
+.detail-row .value {
+  color: #333;
+}
+
+/* Status & Priority Badges */
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: white;
+}
+
+.badge.prospect { background: #1976d2; }
+.badge.qualified { background: #6a1b9a; }
+.badge.won { background: #2e7d32; }
+.badge.lost { background: #c62828; }
+
+.badge.priority { background: #ff9800; }
+
+/* Notes section */
+.notes {
+  margin-top: 16px;
+  background: #f9f9f9;
+  padding: 12px;
+  border-left: 4px solid #1976d2;
+  border-radius: 6px;
+}
+
+.notes strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+.notes p {
+  margin: 0;
+  font-style: italic;
+  color: #555;
+}

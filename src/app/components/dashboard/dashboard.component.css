@@ -1,0 +1,118 @@
+/* Page container */
+.dashboard {
+  font-family: Arial, sans-serif;
+  color: #333;
+  padding: 16px;
+}
+
+/* Section headings */
+.dashboard h2 {
+  margin-bottom: 16px;
+  color: #1976d2;
+}
+
+.dashboard h3 {
+  margin-bottom: 6px;
+  color: #444;
+}
+
+/* Search & filters */
+.dashboard form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.dashboard input,
+.dashboard select {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.2s ease;
+}
+.dashboard input{
+    width: 250px;
+}
+.dashboard input:focus,
+.dashboard select:focus {
+  border-color: #1976d2;
+}
+
+/* Stats cards */
+.stats {
+  display: flex;
+  gap: 16px;
+  align-items: stretch;
+  margin-bottom: 20px;
+}
+
+.stat-card {
+  flex: 1;
+  background: white;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.stat-card h3 {
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #666;
+}
+
+.stat-card div {
+  font-size: 20px;
+  font-weight: bold;
+  color: #1976d2;
+}
+
+/* Leads list */
+.leads {
+  margin-top: 16px;
+}
+
+.lead-card {
+  background: white;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lead-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.lead-card b {
+  font-size: 15px;
+  color: #222;
+}
+
+.lead-card small {
+  display: block;
+  margin-top: 4px;
+  color: #777;
+  font-size: 13px;
+}
+
+/* Open link */
+.lead-card a {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 4px 10px;
+  font-size: 13px;
+  border-radius: 6px;
+  background: #1976d2;
+  color: white;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.lead-card a:hover {
+  background: #145aa1;
+}
